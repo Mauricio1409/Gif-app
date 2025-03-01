@@ -1,11 +1,11 @@
 import { Gif } from '../interfaces/gifs.interface';
 import { GiphyItem } from '../interfaces/giphy.interfaces';
 export class GifMapper{
-  static mapGiphyItemGif(giphyItem: GiphyItem): Gif{
+  static mapGiphyItemGif(Items: GiphyItem): Gif{
     return {
-      id: giphyItem.id,
-      title: giphyItem.title,
-      url: giphyItem.images.original.url
+      id: Items.id,
+      title: Items.title,
+      url: Items.images.original.url
     }
 
 

@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { GifServices } from '../../../services/gifs.services';
 
 interface menuOptions{
   icon: string;
@@ -15,6 +16,9 @@ interface menuOptions{
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideMenuOptionsComponent {
+
+  GifServices = inject(GifServices);
+
   menuOptios : menuOptions[] = [{
     icon: "fa-solid fa-chart-line",
     label: "Trending",
